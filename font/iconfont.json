@@ -1,0 +1,37 @@
+{
+  "id": "2244804",
+  "name": "MoYu",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "554024",
+      "name": "影视",
+      "font_class": "iconset0129",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "3079845",
+      "name": "京剧",
+      "font_class": "jingju",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "3916564",
+      "name": "歌曲2",
+      "font_class": "gequ",
+      "unicode": "e68f",
+      "unicode_decimal": 59023
+    },
+    {
+      "icon_id": "7746238",
+      "name": "综艺",
+      "font_class": "xinghongbangicon-",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    }
+  ]
+}
