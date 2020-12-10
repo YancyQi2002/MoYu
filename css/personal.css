@@ -1,0 +1,409 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
+@media (min-width:810px) {
+	.wrapper-max {
+		/* 栅格布局，居中卡片 */
+		display: grid;
+		align-items: center;
+		justify-content: center;
+		padding-top: 60px;
+		margin-top: -140px;
+		height: 100vh;
+		font-size: 14px;
+		box-sizing: border-box;
+		font-family: "century gothic", "Raleway", "microsoft yahei", sans-serif;
+	}
+	
+	.wrapper-md {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 809px) {
+	.wrapper-max,
+	.profile-card {
+		display: none;
+	}
+	
+	.wrapper-md {
+		display: block;
+		text-align: center;
+	}
+	
+	.card-body .card-text .title p {
+		margin: 20px 0 18px 0;
+		font-size: 1em;
+		color: var(--text-color-grey);
+	}
+	
+	.work-exp-item {
+		border-bottom: 1px dashed #096;
+	}
+	
+	.work-exp-item:nth-child(1) {
+		border-top: 1px dashed #096;
+	}
+	
+	.position {
+		font-size: 1.3em;
+	}
+	
+	.time {
+		color: var(--text-color-light-gray);
+	}
+	
+	.company {
+		font-size: .6em;
+	}
+	
+	.carousel-caption {
+		padding-top: 0;
+		padding-bottom: 0;
+		font-size: 5px;
+		color: #FF3300;
+	}
+	
+	.carousel-indicators li {
+		background-color: #000 !important;
+	}
+	
+	.carousel-indicators li:hover,
+	.carousel-indicators li.active {
+		background-color: #FF0000!important;
+	}
+	
+	.carousel-item img {
+		width: 100%;
+		height: 192px;
+	}
+}
+
+/* iPhone 6/7/8 */
+@media (width:375px) and (height:667px) {
+	.contact ul {
+		padding-left: 68px !important;
+	}
+}
+
+/* iPhone 6/7/8 Plus */
+@media (width:414px) and (height:736px) {
+	.contact ul {
+		padding-left: 86px !important;
+	}
+}
+
+/* Galaxy Fold */
+@media (width:280px) and (height:653px) {
+	.contact ul {
+		padding-left: 16px !important;
+	}
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+h1 {
+	font-family: CenturyGothic, "Raleway";
+	font-size: 24px; 
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 700;
+	line-height: 26.4px;
+}
+h3 { 
+	font-family: CenturyGothic, "Raleway";
+    font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 700;
+	line-height: 15.4px;
+}
+p { 
+	font-family: CenturyGothic, "Raleway";
+    font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+blockquote { 
+	font-family: CenturyGothic, "Raleway";
+    font-size: 21px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 30px;
+}
+pre {
+	font-family: CenturyGothic, "Raleway";
+	font-size: 13px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 18.5714px;
+}
+
+:root {
+	/* 主蓝色，按钮，社交图标 */
+	--primary-color: #71b3dd;
+	/* 主蓝色，深，导航 */
+	--primary-dark-color: #4489b5;
+	--text-color-grey: #8b979f;
+	--text-color-light-gray: #c1c7cb;
+	--text-color-dark-gray: #5a6f7c;
+}
+
+.profile-card {
+	display: grid;
+	/* 12格栅格 */
+	grid-template-columns: repeat(12, 1fr);
+	/* 每个列之间的空隙是12px */
+	column-gap: 12px;
+	/* 卡片总宽度为627px */
+	width: 627px;
+	/* 卡片总高度为374px */
+	height: 374px;
+	box-shadow: 0 0 22px 3px rgba(0, 0, 0, .18);
+}
+
+.profile-image {
+	/* 图片占5列 */
+	grid-column: 8 / 13;
+	/* 垂直为靠上对齐 */
+	align-self: start;
+	/* 水平为靠右对齐 */
+	justify-self: end;
+	max-width: 238px;
+	height: 100%;
+	/* 隐藏图片超出区域 */
+	overflow: hidden;
+}
+
+.profile-image img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.profile-card .content {
+	/* 左边内容占7列 */
+	grid-column: 1 / 8;
+	position: relative;
+	padding: 38px 28px 20px 33px;
+}
+
+.profile-card nav {
+	display: flex;
+	position: relative;
+	margin-bottom: 24px;
+}
+
+.profile-card nav a {
+	text-decoration: none;
+	color: var(--text-color-grey);
+}
+
+.profile-card nav a.active {
+	color: var(--primary-dark-color);
+}
+
+.profile-card nav a:not(:last-child) {
+	margin-right: 40px;
+}
+
+.profile-card nav .indicator {
+	position: absolute;
+	left: 0;
+	bottom: -7px;
+	width: 75px;
+	height: 2px;
+	background: var(--primary-dark-color);
+	transition: .4s;
+}
+
+.profile-card .content section {
+	/* 堆叠个人简介和教育经历部分 */
+	position: absolute;
+	/* 默认都不显示  */
+	opacity: 0;
+	/* 淡出淡入效果 */
+	transition: .3s ease-out;
+}
+
+.profile-card .content section.active-section {
+	/* 显示active-section */
+	opacity: 1;
+}
+
+/* 名字、身份与关注按钮左右布局，各占一列，子栅格不受父栅格影响，是个全新的栅格布局 */
+.personal-info {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  padding-top: 12px;
+}
+
+/* 名字 */
+.personal-info .title h1 {
+	font-size: 2em;
+	font-weight: 500;
+}
+
+/* 身份 */
+.personal-info .title p {
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 20px 0 18px 0;
+	font-size: 1em;
+	color: var(--text-color-grey);
+}
+
+/* 关注按钮 */
+.personal-info .follow-btn {
+	display: flex;
+	justify-self: end;
+	justify-content: center;
+	padding: 0 27px;
+	height: 30px;
+	align-items: center;
+	line-height: 30px;
+	color: #fff;
+	background-color: var(--primary-color);
+	border: none;
+	border-radius: 4px;
+}
+
+.personal-info .follow-btn .fas {
+	margin-right: 16px;
+	font-size: 10px;
+}
+
+.profile-card .content section .about-me {
+	padding: 20px;
+	font-weight: 300;
+	text-align: justify;
+	color: var(--text-color-dark-gray);
+}
+
+/* 社交按钮部分 */
+.profile-card footer {
+	margin-top: 210px;
+	margin-left: -34px;
+	font-size: 20px;
+}
+
+.profile-card footer ul,
+.contact ul {
+  display: flex;
+}
+
+.profile-card footer ul li,
+.contact ul li {
+  list-style: none;
+}
+
+.profile-card footer ul li:hover,
+.contact ul li:hover {
+	color: #096;
+}
+
+.profile-card footer ul li:not(:last-child) {
+  margin-right: 15px;
+}
+
+.profile-card footer .fab,
+.contact .fab {
+  font-size: 24px;
+  color: var(--primary-color);
+}
+
+.profile-card footer .btn {
+	padding: 6px 10px !important;
+}
+
+.profile-card footer,
+.profile-card footer a .btn-link:hover,
+.profile-card footer a .btn-link.active,
+.contact a .btn-link:hover,
+.contact a .btn-link.active,
+svg:hover {
+  text-decoration: none !important;
+  border: none !important;
+}
+
+.profile-card footer .wx-img,
+.contact .wx-img {
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex-box;
+	display:flex;
+	margin: auto;
+	-webkit-box-align:center;
+	-ms-flex-align:center;
+	align-items:center;
+	-webkit-box-pack:center;
+	-ms-flex-pack:center;
+	justify-content:center;
+	text-align:center;
+}
+
+/* 教育经历，一共3条教育经历，所以创建了3行栅格布局 */
+.profile-card .work-exps {
+  display: grid;
+  grid-template-rows: repeat(3, minmax(80px, auto));
+  color: var(--text-color-gray);
+}
+
+/* 每个教育经历为三列栅格布局，分别为职位，分隔线、公司名和工作时间部分 */
+.profile-card .work-exp-item {
+  display: grid;
+  /* 列之间的比例 */
+  grid-template-columns: 1fr .1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 职位 */
+.profile-card .position {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* 分隔线 */
+.profile-card .seperator {
+  height: 43px;
+  /* width: 1px; */
+  border-left: 2px dotted #eaeff2;
+}
+
+/* 工作时间 */
+.profile-card .time {
+  color: var(--text-color-light-gray);
+}
+
+/* 公司 */
+.profile-card .company {
+  margin-top: 9px;
+  font-size: 14px;
+  color: var(--text-color-dark-gray);
+}
+
+.wrapper2 {
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex-box;
+	display:flex;
+	margin: auto;
+	-webkit-box-align:center;
+	-ms-flex-align:center;
+	align-items:center;
+	-webkit-box-pack:center;
+	-ms-flex-pack:center;
+	justify-content:center;
+	text-align:center;
+}
+
+.card-deck {
+	margin-right: 35px;
+	margin-left: 35px;
+}
