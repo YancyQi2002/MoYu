@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>节日祝福动画</title>
+    <!-- [if lt IE 9]>
+  	  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <![engif] -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="shortcut icon" href="./favicon.ico">
+	<link rel="stylesheet" href="./css/happynewyear.css">
+</head>
+<body>
+	<!-- 参照 BV1v54y1t7zn -->
+	<section>
+		<div class="box">
+		  <dic class="circle">
+			<div class="text">
+			  <span style="--x:0"><a href="https://yancyqi2002.github.io/MoYu/" target="_blank">新</a></span>
+			  <span style="--x:1"><a href="https://yancyqi2002.github.io/MoYu/" target="_blank">年</a></span>
+			  <br />
+			  <span style="--x:2"><a href="https://yx-blog.vercel.app/" target="_blank">快</a></span>
+			  <span style="--x:3"><a href="https://yx-blog.vercel.app/" target="_blank">乐</a></span>
+			</div>
+		  </dic>
+		</div>
+	  </section>
+
+	  <script>
+		const bubbles = () => {
+		  let count = 300;
+		  let section = document.querySelector("section");
+		  for (let i = 0; i < count; i++) {
+			let bubble = document.createElement('i');
+			let x = Math.floor(Math.random() * window.innerWidth);
+			y = Math.floor(Math.random() * window.innerHeight);
+  
+			let size = Math.random() * 60;
+			bubble.style.left = x + 'px';
+			bubble.style.top = y + 'px';
+			bubble.style.width = size + 'px';
+			bubble.style.height = size + 'px';
+			bubble.style.animationDuration = 5 + size + 's';
+			bubble.style.animationDelay = -size + 's';
+  
+			section.appendChild(bubble);
+		  }
+		}
+
+		bubbles()
+
+  	</script>
+</body>
+</html>
